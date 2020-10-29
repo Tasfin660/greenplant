@@ -1,0 +1,87 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 38rem;
+    height: max-content;
+    padding: 3rem;
+    border: 1px solid $primary;
+    border-radius: 3px;
+    background-color: $blue-background;
+    box-shadow: 0 1rem 1.5rem rgba(black, .15);
+
+    /** 1100px / 16 = 68.75em */
+    @media only screen and (max-width: 68.75em) {
+        width: 38rem;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        align-self: center;
+        font-family: 'gt_walsheim_probold';
+        font-size: 3.5rem;
+        color: $primary-dark;
+        margin-bottom: 2rem;
+    }
+
+    &__icon-field {
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    &__icon {
+        position: absolute;
+        width: 1.6rem;
+        height: 1.6rem;
+        fill: #aaa;
+        left: 1rem;
+        bottom: 53%;
+        transform: translateY(50%);
+    }
+
+    &__input {
+        width: 100%;
+        font-family: inherit;
+        font-size: 1.5rem;
+        color: inherit;
+        padding: 1.2rem;
+        padding-left: 3.5rem;
+        outline: none;
+        border: 1px solid $primary;
+        border-radius: 5px;
+        background-color: $blue-background;
+    }
+
+    &__select {
+        font-family: inherit;
+        color: inherit;
+        outline: none;
+        background-color: $blue-background;
+        border-color: $primary;
+        border-radius: 2px;
+        padding: .6rem;
+    }
+
+    &__terms-group {
+        margin: 2rem 0;
+    }
+
+    &__submit {
+        font-family: inherit;
+        font-weight: 300;
+        font-size: 1.9rem;
+        color: white;
+        letter-spacing: 1px;
+        background-color: $primary;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        padding: 1.25rem;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover,
+        &:active {
+            background-color: darken($primary, 4%);
+        }
+    }
+}

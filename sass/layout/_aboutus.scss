@@ -1,0 +1,53 @@
+.about {
+
+    &__figure {
+        z-index: 1;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 5rem;
+            left: 5rem;
+            border: 1rem solid $primary-dark;
+            z-index: -1;
+
+            /** 450px / 16 = 28.125em */
+            @media only screen and (max-width: 28.125em) {
+                top: 3.5rem;
+                left: 3.5rem;
+            }
+        }
+    }
+
+    &__header {
+        font-family: 'gt_walsheim_probold';
+        font-size: 3.5rem;
+        white-space: nowrap;
+        margin-bottom: 1.2rem;
+
+        /** 450px / 16 = 28.125em */
+        @media only screen and (max-width: 28.125em) {
+            font-size: 3rem;
+            white-space: normal;
+            text-align: center;
+        }
+    }
+
+    &__long {
+        font-size: 1.4rem;
+        text-align: justify;
+        line-height: 1.45;
+        margin-top: 1.2rem;
+
+        /** 800px / 16 = 50em */
+        @media only screen and (max-width: 50em) {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.about-content {
+    flex-direction: column;
+}

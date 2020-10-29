@@ -1,0 +1,42 @@
+.logo {
+    display: flex;
+
+    &__img {
+        width: 4.5rem;
+    }
+
+    &__text {
+        font-family: 'gt_walsheim_probold';
+        font-size: 3.5rem;
+        margin-left: 1rem;
+
+        &--1 {
+            color: $primary-dark;
+            margin-right: -.7rem;
+
+            /** 600px / 16 = 37.5em */
+            @media only screen and (max-width: 37.5em) {
+                color: white;
+            }
+        }
+
+        &--2 {
+            color: #1ec00a;
+
+            /** 600px / 16 = 37.5em */
+            @media only screen and (max-width: 37.5em) {
+                color: white;
+            }
+        }
+    }
+
+    /** 1300px / 16 = 81.25em */
+    @media only screen and (max-width: 81.25em) {
+        font-size: 3rem;
+    }
+
+    /** 450px / 16 = 28.125em */
+    @media only screen and (max-width: 28.125em) {
+        font-size: 2.5rem;
+    }
+}

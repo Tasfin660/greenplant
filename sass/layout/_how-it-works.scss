@@ -1,0 +1,80 @@
+.work {
+
+    &__box {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__box:hover &__number {
+        background-color: $primary;
+    }
+
+    &__number {
+        font-size: 3rem;
+        color: white;
+        width: 5rem;
+        height: 5rem;
+        background-color: $primary-dark;
+        border-radius: .8rem;
+        margin-right: 1rem;
+        transition: all .2s;
+    }
+
+    &__text {
+        font-size: 1.55rem;
+        line-height: 1.4;
+        width: 45rem;
+
+        /**  400px / 16 = 25em */
+        @media only screen and (max-width: 25em) {
+            font-size: 1.5rem;
+            line-height: 1.1;
+            width: 28rem;
+        }
+    }
+
+    &__title-box {
+        display: flex;
+        align-items: center;
+        border-top: 2px solid $primary-dark;
+        padding-top: 2.2rem;
+        margin-top: 2.2rem;
+
+        &-left {
+            flex-basis: 12%;
+            display: flex;
+            align-items: center;
+            padding: .1rem 0;
+            border: 2px solid $primary-dark;
+        }
+
+        &-right {
+            flex-basis: 88%;
+            padding: .4rem 1rem;
+            background-color: $primary-dark;
+        }
+    }
+
+    &__icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: $primary;
+        margin-left: .4rem;
+    }
+
+    &__title {
+        font-family: 'gt_walsheim_promedium';
+        font-size: 1.9rem;
+        letter-spacing: .6px;
+        color: white;
+    }
+
+}
+
+.work-left {
+    margin-top: 2rem;
+}

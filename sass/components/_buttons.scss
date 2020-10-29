@@ -1,0 +1,57 @@
+.header__btn {
+
+    &:link,
+    &:visited {
+        font-size: 2.3rem;
+        color: white;
+        text-decoration: none;
+        padding: .8rem 3rem;
+        border-radius: 10rem;
+        background-color: $primary;
+        box-shadow: 0 .5rem 2rem rgba(black, .1);
+        transition: all .2s;
+    }
+
+    &:hover,
+    &:active {
+        background-color: darken($primary, 2%);
+    }
+}
+
+.nav__btn {
+
+    &:link,
+    &:visited {
+        border-radius: 10rem;
+        color: white;
+        background-color: $primary;
+        font-size: 1.8rem;
+        padding: .8rem 1em;
+        text-decoration: none;
+    }
+}
+
+.about__btn {
+
+    &:link,
+    &:visited {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        background-color: darken($primary, 2%);
+        box-shadow: 0 1rem 1.5rem rgba(black, .08);
+        transition: all .2s;
+        margin-top: 2.5rem;
+    }
+
+    &:hover,
+    &:active {
+        background-color: darken($primary, 4%);
+    }
+
+    svg {
+        width: 3rem;
+        height: 3rem;
+        fill: white;
+    }
+}

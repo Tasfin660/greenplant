@@ -1,0 +1,190 @@
+.ourwork {
+    display: flex;
+    box-shadow: 0 1rem 1.5rem rgba(black, .15);
+    position: relative;
+
+    /** 900px / 16 = 56.25em */
+    @media only screen and (max-width: 56.25em) {
+        flex-direction: column;
+    }
+
+    &__img-container {
+
+        /** 600px / 16 = 37.5em */
+        @media only screen and (max-width: 37.5em) {
+            flex-direction: column;
+        }
+    }
+
+
+    &__figure {
+        margin-top: -4rem;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+
+            /** 600px / 16 = 37.5em */
+            @media only screen and (max-width: 37.5em) {
+                margin-right: 0;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: attr(data-number);
+            font-family: 'gt_walsheim_promedium';
+            font-size: 2.1rem;
+            color: $primary-dark;
+            width: 3.3rem;
+            height: 3.3rem;
+            border-radius: 50%;
+            border: 3px solid $primary-dark;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #eafcfc;
+            top: 115%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+
+            /** 600px / 16 = 37.5em */
+            @media only screen and (max-width: 37.5em) {
+                top: 50%;
+                left: 40rem;
+                display: none;
+                transform: translateY(-50%);
+            }
+        }
+
+        /** 900px / 16 = 56.25em */
+        @media only screen and (max-width: 56.25em) {
+            margin: 2rem 0 9rem 0;
+        }
+
+        /** 600px / 16 = 37.5em */
+        @media only screen and (max-width: 37.5em) {
+            margin: 1.3rem 0;
+        }
+    }
+
+    &__line {
+        height: .4rem;
+        width: 48rem;
+        background-color: $primary-dark;
+        position: absolute;
+        top: 23rem;
+        left: 15rem;
+        z-index: 1;
+
+        /** 1000px / 16 = 62.5em */
+        @media only screen and (max-width: 62.5em) {
+            width: 45rem;
+            top: 24.7rem;
+            left: 14rem;
+        }
+
+        /** 900px / 16 = 56.25em */
+        @media only screen and (max-width: 56.25em) {
+            width: 62rem;
+            top: 24.7rem;
+            left: 16rem;
+        }
+
+        /** 800px / 16 = 50em */
+        @media only screen and (max-width: 50em) {
+            width: 43rem;
+            top: 18.8rem;
+            left: 13rem;
+        }
+
+        /** 600px / 16 = 37.5em */
+        @media only screen and (max-width: 37.5em) {
+            top: 50%;
+            left: 40rem;
+            display: none;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__logo {
+        width: 4rem;
+        margin-top: 2.5rem;
+
+        /** 900px / 16 = 56.25em */
+        @media only screen and (max-width: 56.25em) {
+            width: 5rem;
+        }
+    }
+
+    &__title {
+        font-family: 'gt_walsheim_probold';
+        font-size: 2rem;
+        margin: 1.5rem 0 1.2rem 0;
+
+        /** 900px / 16 = 56.25em */
+        @media only screen and (max-width: 56.25em) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__long {
+        font-size: 1.3rem;
+        text-align: justify;
+
+        /** 1000px / 16 = 62.5em */
+        @media only screen and (max-width: 62.5em) {
+            text-align: initial;
+        }
+
+        /** 900px / 16 = 56.25em */
+        @media only screen and (max-width: 56.25em) {
+            font-size: 1.7rem;
+            line-height: 1.45;
+            text-align: center;
+            width: 90%;
+        }
+
+        /** 600px / 16 = 37.5em */
+        @media only screen and (max-width: 37.5em) {
+            text-align: justify;
+        }
+
+        /** 450px / 16 = 28.125em */
+        @media only screen and (max-width: 28.125em) {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+}
+
+.ourwork-left {
+    flex-basis: 74%;
+    padding: 0 2rem;
+    background-color: $blue-background;
+
+    /** 900px / 16 = 56.25em */
+    @media only screen and (max-width: 56.25em) {
+        flex-basis: 50%;
+    }
+}
+
+.ourwork-right {
+    flex-basis: 26%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 1.5rem;
+    background-color: #2a2a2a;
+
+    /** 900px / 16 = 56.25em */
+    @media only screen and (max-width: 56.25em) {
+        flex-basis: 50%;
+    }
+
+    /** 600px / 16 = 37.5em */
+    @media only screen and (max-width: 37.5em) {
+        margin-top: 1.7rem;
+    }
+}

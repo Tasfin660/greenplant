@@ -1,0 +1,65 @@
+.header {
+    background-image: linear-gradient(to right, rgba(#1fd9d9, .05), rgba(#1fd9d9, .1));
+    background-color: white;
+    height: 90vh;
+    position: relative;
+
+    /** 600px / 16 = 37.5em */
+    @media only screen and (max-width: 37.5em) {
+        background-image: linear-gradient(to right bottom, rgba(#00c50f, .6), rgba(#116f06, .8)), url(../../img/hero.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__content {
+        top: 45%;
+        left: 30%;
+        flex-direction: column;
+
+        /** 1100px / 16 = 68.75em */
+        @media only screen and (max-width: 68.75em) {
+            left: 50%;
+        }
+    }
+
+    &__long {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        width: 65rem;
+        text-align: center;
+        margin: 3rem 0;
+
+        /** 600px / 16 = 37.5em */
+        @media only screen and (max-width: 37.5em) {
+            width: 50rem;
+            color: white;
+        }
+
+        /** 450px / 16 = 28.125em */
+        @media only screen and (max-width: 28.125em) {
+            width: 30rem;
+        }
+    }
+
+    &__slide {
+        position: absolute;
+        height: 90vh;
+        width: 70rem;
+        background-image: linear-gradient(to right bottom, rgba(#00c50f, .6), rgba(#116f06, .8)), url(../../img/hero.jpg);
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+        top: 0;
+        right: 0;
+
+        /** 1500px / 16 = 93.75em */
+        @media only screen and (max-width: 93.75em) {
+            width: 50rem;
+        }
+
+        /** 1100px / 16 = 68.75em */
+        @media only screen and (max-width: 68.75em) {
+            display: none;
+        }
+    }
+}

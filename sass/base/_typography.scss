@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'gt_walsheim_probold';
+    src: url('../../fonts/gtwalsheimpro-bold-webfont.woff2') format('woff2'),
+        url('../../fonts/gtwalsheimpro-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt_walsheim_prolight';
+    src: url('../../fonts/gtwalsheimpro-light-webfont.woff2') format('woff2'),
+        url('../../fonts/gtwalsheimpro-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt_walsheim_promedium';
+    src: url('../../fonts/gtwalsheimpro-medium-webfont.woff2') format('woff2'),
+        url('../../fonts/gtwalsheimpro-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'gt_walsheim_prolight', sans-serif;
+    color: #333;
+}
+
+.heading-1 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 6rem;
+
+    span {
+        color: $primary-dark;
+
+        /** 600px / 16 = 37.5em */
+        @media only screen and (max-width: 37.5em) {
+            color: white;
+        }
+    }
+
+    /** 1300px / 16 = 81.25em */
+    @media only screen and (max-width: 81.25em) {
+        font-size: 5rem;
+    }
+
+    /** 600px / 16 = 37.5em */
+    @media only screen and (max-width: 37.5em) {
+        font-size: 4rem;
+        color: white;
+    }
+
+    /** 450px / 16 = 28.125em */
+    @media only screen and (max-width: 28.125em) {
+        font-size: 3rem;
+        text-align: center;
+    }
+}

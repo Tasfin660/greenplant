@@ -1,0 +1,115 @@
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 4rem 8rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    /** 1100px / 16 = 68.75em */
+    @media only screen and (max-width: 68.75em) {
+        padding: 4rem 6rem;
+        justify-content: space-between;
+    }
+
+    /** 1300px / 16 = 81.25em */
+    @media only screen and (max-width: 81.25em) {
+        padding: 4rem;
+    }
+
+    /** 800px / 16 = 50em */
+    @media only screen and (max-width: 50em) {
+        padding: 4rem 6rem;
+    }
+
+    /** 450px / 16 = 28.125em */
+    @media only screen and (max-width: 28.125em) {
+        padding: 4rem;
+    }
+
+    &__logo {
+        text-decoration: none;
+        margin-right: 10rem;
+
+        /** 1350px / 16 = 84.375em */
+        @media only screen and (max-width: 84.375em) {
+            margin-right: 5rem;
+        }
+
+        /** 1300px / 16 = 81.25em */
+        @media only screen and (max-width: 81.25em) {
+            margin-right: 3rem;
+        }
+
+        /** 1100px / 16 = 68.75em */
+        @media only screen and (max-width: 68.75em) {
+            margin: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+
+        /** 800px / 16 = 50em */
+        @media only screen and (max-width: 50em) {
+            display: none;
+        }
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+
+            /** 1300px / 16 = 81.25em */
+            @media only screen and (max-width: 81.25em) {
+                margin-right: 2.5rem;
+            }
+        }
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            font-size: 1.8rem;
+            color: $primary-dark;
+            text-decoration: none;
+        }
+
+        &:after {
+            display: block;
+            content: '';
+            background-color: currentColor;
+            height: 2px;
+            width: 100%;
+            transform: scaleX(0) translateY(-1px);
+            transition: all .25s;
+        }
+
+        &:hover:after {
+            transform: scaleX(1) translateY(-1px);
+        }
+    }
+
+    &__icon {
+        width: 2.7rem;
+        height: 2.7rem;
+        fill: white;
+        margin-left: auto;
+
+        /** 1100px / 16 = 68.75em */
+        @media only screen and (max-width: 68.75em) {
+            fill: $primary;
+            margin: 0;
+        }
+
+        /** 600px / 16 = 37.5em */
+        @media only screen and (max-width: 37.5em) {
+            fill: white;
+        }
+    }
+}
