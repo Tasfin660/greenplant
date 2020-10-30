@@ -35,7 +35,7 @@
 .feature {
     padding: 1.3rem;
     border-radius: 3px;
-    background-color: #eafcfc;
+    background-color: $blue-backgrond;
     clip-path: polygon(0 17.2%, 100% 0, 100% 100%, 0% 100%);
 
     &-content {
@@ -54,7 +54,7 @@
             top: 0;
             left: 0;
             clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
-            background-color: #eafcfc;
+            background-color: $blue-backgrond;
             transform: scale(0.984);
             z-index: -1;
         }
